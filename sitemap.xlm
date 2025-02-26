@@ -41,4 +41,151 @@
     </url>
     
     <url>
-        <loc>https://e-reading.link/
+        <loc>https://e-reading.link/about</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/faq</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/terms</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/privacy</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Legacy PHP Script Pages (Important for SEO) -->
+    <url>
+        <loc>https://e-reading.link/bookreader.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/book.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/chapter.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/bookbytypes.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/bookbyauthor.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/djvureader.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/htmbook.php</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Specific High-Value Content Referenced in Wikipedia -->
+    <url>
+        <loc>https://e-reading.link/bookreader.php/134839/Wynne_-_The_Origin_of_Buddhist_Meditation.pdf</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/chapter.php/17524/15/Gumilev_-_Drevnie_tyurki.html</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/chapter.php/46184/11/Pohlebkin_-_Nacional'nye_kuhni_nashih_narodov.html</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/bookreader.php/134630/Pyrrhonism.pdf</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/bookreader.php/135882/The_Routledge_Atlas_of_the_Arab-Israeli_sonflict.pdf</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/bookreader.php/100972/Korablinov_-_Zhizn'_Nikitina.html</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/djvureader.php/139326/3/Filostrat_-_Zhizn'_Apolloniya_Tianskogo.html</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/book.php?book=1002768</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/illustrations</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://e-reading.link/cover</loc>
+        <lastmod>2025-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>
