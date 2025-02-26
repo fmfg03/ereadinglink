@@ -1,0 +1,88 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.e-reading\.link [NC]
+RewriteRule ^(.*)$ https://e-reading.link/$1 [L,R=301]
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Enable compression for better performance
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/pdf
+</IfModule>
+
+# Set browser caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; media-src 'self'; frame-src 'none';"
+</IfModule>
+
+# Special redirects for old content paths
+# Redirect PHP requests to new pages while preserving SEO
+
+# Create aliases for more user-friendly URLs while keeping old URLs accessible
+# This helps maintain all the Wikipedia backlinks
+
+# Redirect /book.php?book=X to /books/X/
+RewriteCond %{QUERY_STRING} ^book=([0-9]+)$
+RewriteRule ^book\.php$ /books/%1/? [L,R=301]
+
+# Redirect chapter.php links to more user-friendly URLs
+# but keep the original URLs accessible for SEO
+RewriteCond %{REQUEST_URI} ^/chapter\.php/([0-9]+)/([0-9]+)/([^/]+)\.html$
+RewriteRule ^(.*)$ - [L]
+
+# Redirect bookreader.php links to more user-friendly URLs
+# but keep the original URLs accessible for SEO
+RewriteCond %{REQUEST_URI} ^/bookreader\.php/([0-9]+)/([^/]+)\.pdf$
+RewriteRule ^(.*)$ - [L]
+
+# Error pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Prevent access to sensitive files
+<FilesMatch "(^\.ht|\.env|composer\.(json|lock))">
+  Order deny,allow
+  Deny from all
+</FilesMatch>
+
+# Block bad bots
+RewriteCond %{HTTP_USER_AGENT} ^.*(wget|curl|msnbot|scrapbot|winhttp|webalta|libwww-perl|python).*$ [NC]
+RewriteRule .* - [F,L]
+
+# Allow PDFs and other document types to be accessed
+<FilesMatch "\.(pdf|djvu|epub|mobi|doc|docx|rtf|txt|html)$">
+  Order allow,deny
+  Allow from all
+</FilesMatch>
