@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /
+
+# Protect utility directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+
+# Prevent crawling of non-content files
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Important: Allow crawling of all PHP scripts that have backlinks
+Allow: /bookreader.php
+Allow: /book.php
+Allow: /chapter.php
+Allow: /bookbytypes.php
+Allow: /bookbyauthor.php
+Allow: /djvureader.php
+Allow: /htmbook.php
+Allow: /download.php
+
+# Allow crawling of specific content directories
+Allow: /illustrations/
+Allow: /cover/
+
+# Explicitly mark preferred domain (matching canonical)
+Host: e-reading.link
+
+# Set crawl delays for major search engines
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: bingbot
+Crawl-delay: 2
+
+User-agent: Yandex
+Crawl-delay: 2
+
+# Block aggressive crawlers or those causing issues
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+# Sitemap URL
+Sitemap: https://e-reading.link/sitemap.xml
